@@ -24,111 +24,111 @@
          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       </rowConstraints>
       <AnchorPane prefHeight="21.0" prefWidth="150.0">
-         <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" text="AC" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#eraseAll" prefHeight="55.0" prefWidth="150.0" text="AC" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font></Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="1">
-         <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" text="&lt;--" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#eraseLast" prefHeight="55.0" prefWidth="150.0" text="&lt;--" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="2">
-         <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" text="\%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newOperator" prefHeight="55.0" prefWidth="150.0" text="\%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="3">
-         <Button mnemonicParsing="false" onAction="#dividir" prefHeight="55.0" prefWidth="150.0" text="/" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newOperator" prefHeight="55.0" prefWidth="150.0" text="/" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.rowIndex="1">
-         <Button fx:id="number7" mnemonicParsing="false" onAction="#siete" prefHeight="55.0" prefWidth="150.0" text="7" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="7" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <Button fx:id="number8" mnemonicParsing="false" onAction="#ocho" prefHeight="55.0" prefWidth="150.0" text="8" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="8" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-         <Button fx:id="number9" mnemonicParsing="false" onAction="#nueve" prefHeight="55.0" prefWidth="150.0" text="9" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="9" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-         <Button mnemonicParsing="false" onAction="#multiplicar" prefHeight="55.0" prefWidth="150.0" text="X" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newOperator" prefHeight="55.0" prefWidth="150.0" text="*" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.rowIndex="2">
-         <Button fx:id="number4" mnemonicParsing="false" onAction="#cuatro" prefHeight="55.0" prefWidth="150.0" text="4" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="4" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <Button fx:id="number5" mnemonicParsing="false" onAction="#cinco" prefHeight="55.0" prefWidth="150.0" text="5" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="5" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-         <Button fx:id="number6" mnemonicParsing="false" onAction="#seis" prefHeight="55.0" prefWidth="150.0" text="6" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="6" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-         <Button fx:id="minus" mnemonicParsing="false" onAction="#restar" prefHeight="55.0" prefWidth="150.0" text="-" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newOperator" prefHeight="55.0" prefWidth="150.0" text="-" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.rowIndex="3">
-         <Button fx:id="number1" mnemonicParsing="false" onAction="#uno" prefHeight="55.0" prefWidth="150.0" text="1" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="1" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <Button fx:id="number2" mnemonicParsing="false" onAction="#dos" prefHeight="55.0" prefWidth="150.0" text="2" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="2" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-         <Button fx:id="number3" mnemonicParsing="false" onAction="#tres" prefHeight="55.0" prefWidth="150.0" text="3" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="3" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-         <Button fx:id="plus" mnemonicParsing="false" onAction="#sumar" prefHeight="55.0" prefWidth="150.0" text="+" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newOperator" prefHeight="55.0" prefWidth="150.0" text="+" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
@@ -142,7 +142,7 @@
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <Button fx:id="number0" mnemonicParsing="false" onAction="#cero" prefHeight="55.0" prefWidth="150.0" text="0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#newNumber" prefHeight="55.0" prefWidth="150.0" text="0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>
@@ -156,7 +156,7 @@
          </Button>
       </AnchorPane>
       <AnchorPane prefHeight="21.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
-         <Button fx:id="equal" mnemonicParsing="false" onAction="#igual" prefHeight="55.0" prefWidth="150.0" text="=" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button mnemonicParsing="false" onAction="#equal" prefHeight="55.0" prefWidth="150.0" text="=" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                <Font size="24.0" />
             </font>

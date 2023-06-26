@@ -34,11 +34,39 @@ public class CalculadoraController {
         screen.setText(text + number);
     }
 
+    public void newPoint(ActionEvent event) {
+        String text = screen.getText();
+        if (text.equals("0")) {
+            text = "";
+        }
+        Button sourceButton = (Button) event.getSource();
+        String point = sourceButton.getText();
+
+        screen.setText(text + point);
+    }
+
+    public void newParenthesis(ActionEvent event) {
+        String text = screen.getText();
+        if (text.equals("0")) {
+            text = "";
+        }
+        Button sourceButton = (Button) event.getSource();
+        String parenthesis = sourceButton.getText();
+
+        screen.setText(text + parenthesis);
+    }
+
     public void equal() {
         String text = screen.getText();
         if (!text.isEmpty()) {
-            int result = calculadora.performCalculation(text);
+            double result = calculadora.performCalculation(text);
             screen.setText(String.valueOf(result));
+            if (result % 1 == 0) {
+                int intResult = (int) result;
+                screen.setText(String.valueOf(intResult));
+            } else {
+                screen.setText(String.valueOf(result));
+            }
         }
     }
 

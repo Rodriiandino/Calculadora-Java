@@ -2,10 +2,11 @@ package main.calculadora;
 
 import java.util.Stack;
 
+
 public class Calculadora {
     public Double performCalculation(String expresion) {
         // Dividir el texto en tokens (números y operadores)
-        String[] tokens = expresion.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)");
+        String[] tokens = expresion.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))");
 
         // Pilas para números y operadores
         Stack<Double> numbers = new Stack<>();
@@ -16,10 +17,19 @@ public class Calculadora {
                 numbers.push(Double.parseDouble(token));
             } else if (isOperator(token)) {
                 char operator = token.charAt(0);
-                while (!operators.isEmpty() && precedence(operators.peek()) >= precedence(operator)) {
+                while (!operators.isEmpty() && precedence(operators.peek()) >= precedence(operator) && !operators.peek().equals('(')) {
                     performOperation(numbers, operators);
                 }
                 operators.push(operator);
+            } else if (isParenthesis(token)) {
+                if (token.equals("(")) {
+                    operators.push('(');
+                } else {
+                    while (!operators.isEmpty() && !operators.peek().equals('(')) {
+                        performOperation(numbers, operators);
+                    }
+                    operators.pop();
+                }
             }
         }
 
@@ -38,7 +48,11 @@ public class Calculadora {
         return token.matches("[+\\-*/%]");
     }
 
-    // Le asignamos un valor numérico a cada operador
+    private boolean isParenthesis(String token) {
+        return token.matches("[()]");
+    }
+
+    // Asignar un valor numérico a cada operador
     private int precedence(char operator) {
         return switch (operator) {
             case '+', '-' -> 1;
@@ -48,8 +62,14 @@ public class Calculadora {
         };
     }
 
-    // Realiza la operación correspondiente
+    // Realizar la operación correspondiente
     private void performOperation(Stack<Double> numbers, Stack<Character> operators) {
+
+        if (operators.peek().equals('(')) {
+            operators.pop();
+            return;
+        }
+
         double num2 = numbers.pop();
         double num1 = numbers.pop();
         char operator = operators.pop();

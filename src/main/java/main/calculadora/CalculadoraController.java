@@ -13,21 +13,36 @@ public class CalculadoraController {
     private final Calculadora calculadora = new Calculadora();
 
 
-    public void newOperator(ActionEvent event) {
+    private void newOperatorAndPoint(ActionEvent event) {
         String text = screen.getText();
-        if (text.substring(text.length() - 1).matches("[+\\-*/%]")) {
-            text = text.substring(0, text.length() - 1);
-        }
         Button sourceButton = (Button) event.getSource();
         String operador = sourceButton.getText();
+
+        if (text.isEmpty() && operador.equals("-")) {
+            screen.setText(operador);
+            return;
+        }
+
+        if (text.isEmpty()) {
+            return;
+        }
+
+        if (text.substring(text.length() - 1).matches("[+\\-*/%.]")) {
+            text = text.substring(0, text.length() - 1);
+        }
+
         screen.setText(text + operador);
     }
 
+
+    public void newOperator(ActionEvent event) {
+        newOperatorAndPoint(event);
+    }
+
+
     public void newNumber(ActionEvent event) {
         String text = screen.getText();
-        if (text.equals("0")) {
-            text = "";
-        }
+        if (text.equals("0")) text = "";
         Button sourceButton = (Button) event.getSource();
         String number = sourceButton.getText();
 
@@ -35,25 +50,33 @@ public class CalculadoraController {
     }
 
     public void newPoint(ActionEvent event) {
-        String text = screen.getText();
-        if (text.equals("0")) {
-            text = "";
-        }
-        Button sourceButton = (Button) event.getSource();
-        String point = sourceButton.getText();
-
-        screen.setText(text + point);
+        newOperatorAndPoint(event);
     }
 
     public void newParenthesis(ActionEvent event) {
         String text = screen.getText();
-        if (text.equals("0")) {
-            text = "";
-        }
         Button sourceButton = (Button) event.getSource();
         String parenthesis = sourceButton.getText();
 
+        if (parenthesis.equals(")") && countOccurrences(text, "(") <= countOccurrences(text, ")")) {
+            return;
+        }
+
+        if (text.equals("0")) {
+            text = "";
+        }
+
         screen.setText(text + parenthesis);
+    }
+
+    private int countOccurrences(String text, String target) {
+        int count = 0;
+        int index = text.indexOf(target);
+        while (index != -1) {
+            count++;
+            index = text.indexOf(target, index + 1);
+        }
+        return count;
     }
 
     public void equal() {

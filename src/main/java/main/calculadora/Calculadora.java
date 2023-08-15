@@ -6,7 +6,7 @@ import java.util.Stack;
 public class Calculadora {
     public Double performCalculation(String expresion) {
         // Dividir el texto en tokens (números y operadores)
-        String[] tokens = expresion.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))");
+        String[] tokens = expresion.split("(?<=[+\\-*/%()])|(?=[+\\-*/%()])");
 
         // Pilas para números y operadores
         Stack<Double> numbers = new Stack<>();
@@ -41,7 +41,7 @@ public class Calculadora {
     }
 
     private boolean isNumber(String token) {
-        return token.matches("\\d+");
+        return token.matches("-?\\d+(\\.\\d+)?"); // Números enteros y decimales
     }
 
     private boolean isOperator(String token) {
@@ -64,7 +64,6 @@ public class Calculadora {
 
     // Realizar la operación correspondiente
     private void performOperation(Stack<Double> numbers, Stack<Character> operators) {
-
         if (operators.peek().equals('(')) {
             operators.pop();
             return;

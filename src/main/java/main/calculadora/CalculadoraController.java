@@ -27,7 +27,7 @@ public class CalculadoraController {
             return;
         }
 
-        if (text.substring(text.length() - 1).matches("[+\\-*/%.]")) {
+        if (text.substring(text.length() - 1).matches("[+\\-*/%.]") ) {
             text = text.substring(0, text.length() - 1);
         }
 
